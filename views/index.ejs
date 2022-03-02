@@ -1,0 +1,15 @@
+
+<form style="text-align: right;"  method="GET">
+  <input type="date" name="date" value="<%=data.date%>" onchange="this.form.submit()">
+  <!-- <button type ="submit"> submit </button>  -->
+  </form>
+<center>
+<h1><%= data.title%></h1>
+
+<% if (data.media_type=='image') { %>
+ <img style="" src=<%=data.url%>>
+<% }else if(data.media_type=='video'){ %>
+  <embed type="video/mp4" src="<%=data.url%>" width="700 " height="500">
+  <% }%>
+  <p><b>Explanation: </b><%= data.explanation%></p>
+</center>
